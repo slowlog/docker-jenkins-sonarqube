@@ -69,9 +69,9 @@ docker-compose up -d
 ```
 ### Done
 - Jenkins 访问 ``http://your ip:8092``
-- SonarQube 访问 ``http://your ip:8093``
+- SonarQube 访问 ``http://your ip:8093`` 默认 admin admin
 
-> 注: up 不起来的话可通过 docker-compose logs 查看构建日志排查错误
+> 注: up 不起来的话可通过 ``docker-compose logs`` 查看构建日志排查错误
 
 
 
