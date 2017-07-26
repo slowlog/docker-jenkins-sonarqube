@@ -1,0 +1,29 @@
+version: '3'
+services:
+   jenkins:
+      container_name: jenkins
+      image: jenkins
+      ports:
+         - "8092:8080" 
+      volumes:
+         - /var/jenkins_home
+         - ./jenkins_home:/var/jenkins_home
+      restart: always  
+   sonarqube:
+      container_name: sonarqube
+      image: sonarqube
+      ports:
+         - "8093:9000"
+      volumes:
+         - /opt/sonarqube/extensions
+         - ./sonarqube_home:/opt/sonarqube/data
+         - ./sonarqube_home/extensions:/opt/sonarqube/extensions
+      environment:
+         - SONARQUBE_JDBC_URL=jdbc:mysql://mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
+         - SONARQUBE_JDBC_USERNAME=sonar
+         - SONARQUBE_JDBC_PASSWORD=yy123456
+      restart: always
+networks:
+  default:
+    external:
+      name: internal
