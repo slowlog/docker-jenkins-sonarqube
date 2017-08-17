@@ -1,5 +1,5 @@
 
-## 使用 ``docker-compose`` 快速部署 Jenkins + SonarQube
+# 使用 ``docker-compose`` 快速部署 Jenkins + SonarQube
 
 ## Version
 - CentOS Linux release 7.2.1511 (Core)
