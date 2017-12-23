@@ -29,7 +29,6 @@
 
 ## 部署流程
 
-docker & docker-compose 的安装步骤请自行 Google
 
 
 ``git clone https://github.com/slowlog/docker-jenkins-sonarqube.git``
